@@ -27,6 +27,6 @@ def obter_dados():
         "temperatura": temperatura,
         "umidade": umidade,
         "bomba": bomba_estado,
-       “sensor_umidsolo”: sensor_umidsolo,
-       “pH”:pH
+        "sensor_umidsolo": sensor_umidsolo,
+        "pH":pH
     }
