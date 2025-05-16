@@ -25,6 +25,7 @@ class BombaCommand(BaseModel):
 @app.post("/bomba")
 def controlar_bomba(cmd: BombaCommand):
     global bomba_estado
+    print(f"Recebido estado: {cmd.estado}")
     if cmd.estado in [0, 1]:
         bomba_estado = cmd.estado
         return {"mensagem": f"Bomba {'ligada' if bomba_estado else 'desligada'}"}
