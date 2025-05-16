@@ -3,15 +3,15 @@ from pydantic import BaseModel
 import random
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app = FastAPI()
-
 bomba_estado = 0  # 0 = desligada, 1 = ligada
 temp_increment = 2
 umid_increment = 5
