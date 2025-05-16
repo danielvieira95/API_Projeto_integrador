@@ -1,6 +1,14 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 import random
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app = FastAPI()
 
